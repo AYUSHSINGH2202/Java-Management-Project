@@ -1,0 +1,35 @@
+
+import java.awt.Color;
+import java.awt.color.*;
+import javax.swing.*;
+import java.awt.*;
+
+public class RemoveEmployee extends JFrame
+{
+	Choice cEmpId;
+	
+	RemoveEmployee()
+	{
+		getContentPane().setBackground(Color.LIGHT_GRAY);
+		setLayout(null);
+		
+		
+		JLabel labelempId=new JLabel("Employee Id");
+		labelempId.setBounds(50,50,100,30);
+		add(labelempId);
+		
+		cEmpId=new Choice();
+		cEmpId.setBounds(100,50,50,30);
+		add(labelempId);
+		
+		
+		setSize(1000,400);
+		setLocation(300,150);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new RemoveEmployee();
+	}
+
+}

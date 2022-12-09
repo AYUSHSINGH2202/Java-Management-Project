@@ -1,0 +1,21 @@
+
+import javax.swing.*;
+
+public class ViewEmployee extends JFrame 
+{
+	ViewEmployee()
+	{
+		
+		setSize(900,700);
+		setLocation(300,50);
+		setVisible(true);
+		
+	}
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+		new ViewEmployee();
+		
+	}
+
+}

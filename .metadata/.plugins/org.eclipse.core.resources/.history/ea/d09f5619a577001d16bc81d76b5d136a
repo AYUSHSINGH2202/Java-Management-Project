@@ -1,0 +1,110 @@
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+
+import javax.swing.*;
+import java.awt.event.*;
+
+
+public class Home extends JFrame implements ActionListener {
+
+	JButton view,remove,add,Update,close;	
+	Home()
+	{
+		setLayout(null);
+		
+		ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("third.png"));
+		Image i2=i1.getImage().getScaledInstance(1120, 630,Image.SCALE_DEFAULT);
+		ImageIcon i3=new ImageIcon(i2);
+		JLabel image=new JLabel(i3);
+		image.setBounds(0,0,1120,630);
+		add(image);
+		
+		
+		JLabel heading=new JLabel("EMPLOYEE DETAILS");
+		heading.setBounds(450,0,400,50);
+		heading.setFont(new Font("Raleway",Font.BOLD,25));
+		heading.setBackground(Color.YELLOW);
+		heading.setForeground(Color.blue);
+		image.add(heading);
+		
+		add=new JButton("Add Employee");
+		add.setBackground(Color.YELLOW);
+		add.setForeground(Color.blue);
+		add.setFont(new Font("Raleway",Font.BOLD,20));
+		add.setBounds(30, 80,250, 70);
+		add.addActionListener(this);
+		image.add(add);
+		
+		Update=new JButton("Update Details");
+		Update.setBackground(Color.YELLOW);
+		Update.setForeground(Color.blue);
+		Update.setFont(new Font("Raleway",Font.BOLD,20));
+		Update.setBounds(30,250,250,70);
+		Update.addActionListener(this);
+		image.add(Update);
+		
+		view=new JButton("View Employee");
+		view.setBackground(Color.YELLOW);
+		view.setForeground(Color.blue);
+		view.setFont(new Font("Raleway",Font.BOLD,20));
+		view.setBounds(800, 80, 250, 70);
+		view.addActionListener(this);
+		image.add(view);
+		
+		remove=new JButton("Remove Employee");
+		remove.setBackground(Color.YELLOW);
+		remove.setForeground(Color.blue);
+		remove.setFont(new Font("Raleway",Font.BOLD,20));
+		remove.setBounds(800, 250, 250, 70);
+		remove.addActionListener(this);
+		image.add(remove);
+		
+		
+		close=new JButton("Close");
+		close.setBackground(Color.yellow);
+		close.setForeground(Color.blue);
+		close.setFont(new Font("Raleway",Font.BOLD,20));
+		close.setBounds(410,430,250,70);
+		close.addActionListener(this);
+		image.add(close);
+		
+		
+		setSize(1120,630);
+		setLocation(70,50);
+		setVisible(true);
+	}
+	
+	public void actionPerformed(ActionEvent ae)
+	{
+		if(ae.getSource()==add)
+		{
+			setVisible(false);
+			new AddEmployee();
+		}
+		else if(ae.getSource()==Update)
+		{
+			
+		}
+		else if(ae.getSource()==remove)
+		{
+			
+		}
+		else if(ae.getSource()==close)
+		{
+			setVisible(false);
+		}
+		else
+		{
+			
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		new Home();
+
+	}
+
+}

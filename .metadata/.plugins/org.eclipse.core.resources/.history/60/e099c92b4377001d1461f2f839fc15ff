@@ -1,0 +1,67 @@
+import java.awt.Color;
+
+import java.awt.*;
+import javax.swing.*;
+import com.toedter.calendar.*;
+
+public class AddEmployee extends JFrame{
+
+	AddEmployee()
+	{
+		getContentPane().setBackground(Color.WHITE);
+		setLayout(null);
+		
+		JLabel heading=new JLabel("Add Employee Details");
+		heading.setBounds(320,30,500,50);
+		heading.setFont(new Font("SAN_SERIF",Font.BOLD,25));
+		heading.setVisible(true);
+		add(heading);
+		
+		JLabel labelname=new JLabel("Name");
+		labelname.setBounds(50,150,150,30);
+		labelname.setFont(new Font("Raleway",Font.BOLD,25));
+		labelname.setVisible(true);
+		add(labelname);
+		
+		JTextField tfname=new JTextField();
+		tfname.setBounds(150,150,150,30);
+		tfname.setVisible(true);
+		add(tfname);
+		
+		JLabel labelfname=new JLabel("Father Name");
+		labelfname.setBounds(400,150,150,30);
+		labelfname.setFont(new Font("Raleway",Font.BOLD,25));
+		labelfname.setVisible(true);
+		add(labelfname);
+		
+		JTextField tffname=new JTextField();
+		tffname.setBounds(600,150,150,30);
+		tffname.setVisible(true);
+		add(tffname);
+		
+		JLabel labeldob=new JLabel("Date of Birth");
+		labeldob.setBounds(50,200,150,30);
+		labeldob.setFont(new Font("Raleway",Font.BOLD,25));
+		labeldob.setVisible(true);
+		add(labeldob);
+		
+		JDateChooser dcdob=new JDateChooser();
+		dcdob.setBounds(220,200,150,30);
+		add(dcdob);
+		
+		
+		
+		
+		setSize(900,700);
+		setLocation(300,50);
+		setVisible(true);
+	}
+	
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		new AddEmployee();
+
+	}
+
+}

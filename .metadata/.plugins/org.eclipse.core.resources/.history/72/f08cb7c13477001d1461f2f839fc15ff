@@ -1,0 +1,21 @@
+import javax.swing.*;
+
+
+public class Home extends JFrame {
+
+	Home()
+	{
+		setSize(1120,630);
+		setLocation(70,50);
+		setVisible(true);
+	}
+	
+	
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		new Home();
+
+	}
+
+}

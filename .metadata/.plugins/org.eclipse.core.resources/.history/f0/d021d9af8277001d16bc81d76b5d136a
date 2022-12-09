@@ -1,0 +1,155 @@
+import java.awt.Color;
+
+import java.awt.*;
+import javax.swing.*;
+import com.toedter.calendar.*;
+
+import java.awt.event.*;
+
+public class AddEmployee extends JFrame implements ActionListener{
+
+	JLabel heading,labelname,tfname,labelfname,labeldob,labelsalary;
+	JTextField tfsalary,tfphone,tfaddress,tfemail,tfaadhar,tfdesignation;
+	JComboBox cbeducation;
+	AddEmployee()
+	{
+		getContentPane().setBackground(Color.WHITE);
+		setLayout(null);
+		
+		heading=new JLabel("Add Employee Details");
+		heading.setBounds(320,30,500,50);
+		heading.setFont(new Font("SAN_SERIF",Font.BOLD,25));
+		heading.setVisible(true);
+		add(heading);
+		
+		labelname=new JLabel("Name");
+		labelname.setBounds(50,150,150,30);
+		labelname.setFont(new Font("Raleway",Font.BOLD,25));
+		labelname.setVisible(true);
+		add(labelname);
+		
+		JTextField tfname=new JTextField();
+		tfname.setBounds(200, 150, 150, 30);
+		tfname.setVisible(true);
+		add(tfname);
+		
+		labelfname=new JLabel("Father Name");
+		labelfname.setBounds(400,150,150,30);
+		labelfname.setFont(new Font("Raleway",Font.BOLD,25));
+		labelfname.setVisible(true);
+		add(labelfname);
+		
+		JTextField tffname=new JTextField();
+		tffname.setBounds(600,150,150,30);
+		tffname.setVisible(true);
+		add(tffname);
+		
+		labeldob=new JLabel("D.O.B");
+		labeldob.setBounds(50,200,150,30);
+		labeldob.setFont(new Font("Raleway",Font.BOLD,25));
+		labeldob.setVisible(true);
+		add(labeldob);
+		
+		JDateChooser dcdob=new JDateChooser();
+		dcdob.setBounds(200, 200, 150, 30);
+		add(dcdob);
+		
+		labelsalary = new JLabel("Salary");
+        labelsalary.setBounds(400, 200, 150, 30);
+        labelsalary.setFont(new Font("Raleway",Font.BOLD,25));
+        add(labelsalary);
+        
+        tfsalary = new JTextField();
+        tfsalary.setBounds(600, 200, 150, 30);
+        add(tfsalary);
+        
+        JLabel labeladdress = new JLabel("Address");
+        labeladdress.setBounds(50, 250, 150, 30);
+        labeladdress.setFont(new Font("Raleway",Font.BOLD,25));
+        add(labeladdress);
+        
+        tfaddress = new JTextField();
+        tfaddress.setBounds(200, 250, 150, 30);
+        add(tfaddress);
+        
+        JLabel labelphone = new JLabel("Phone");
+        labelphone.setBounds(400, 250, 150, 30);
+        labelphone.setFont(new Font("Raleway",Font.BOLD,25));
+        add(labelphone);
+        
+        tfphone = new JTextField();
+        tfphone.setBounds(600, 250, 150, 30);
+        add(tfphone);
+        
+        JLabel labelemail = new JLabel("Email");
+        labelemail.setBounds(50, 300, 150, 30);
+        labelemail.setFont(new Font("Raleway",Font.BOLD,25));
+        add(labelemail);
+        
+        tfemail = new JTextField();
+        tfemail.setBounds(200, 300, 150, 30);
+        add(tfemail);
+        
+        JLabel labeleducation = new JLabel("Higest Education");
+        labeleducation.setBounds(400, 300, 150, 30);
+        labeleducation.setFont(new Font("Raleway",Font.BOLD,25));
+        add(labeleducation);
+        
+        String courses[] = {"BBA", "BCA", "BA", "BSC", "B.COM", "BTech", "MBA", "MCA", "MA", "MTech", "MSC", "PHD"};
+        cbeducation = new JComboBox(courses);
+        cbeducation.setBackground(Color.WHITE);
+        cbeducation.setBounds(600, 300, 150, 30);
+        cbeducation.setFont(new Font("Raleway",Font.BOLD,25));
+        add(cbeducation);
+        
+        JLabel labeldesignation = new JLabel("Designation");
+        labeldesignation.setBounds(50, 350, 150, 30);
+        labeldesignation.setFont(new Font("Raleway",Font.BOLD,25));
+        add(labeldesignation);
+        
+        tfdesignation = new JTextField();
+        tfdesignation.setBounds(200, 350, 150, 30);
+        add(tfdesignation);
+        
+        JLabel labelaadhar = new JLabel("Aadhar Number");
+        labelaadhar.setBounds(400, 350, 150, 30);
+        labelaadhar.setFont(new Font("Raleway",Font.BOLD,25));
+        add(labelaadhar);
+        
+        tfaadhar = new JTextField();
+        tfaadhar.setBounds(600, 350, 150, 30);
+        add(tfaadhar);
+        
+        JLabel labelempId = new JLabel("Employee id");
+        labelempId.setBounds(50, 410, 150, 30);
+        labelempId.setFont(new Font("Raleway",Font.BOLD,25));
+        add(labelempId);
+		
+		JButton add=new JButton("ADD DETAILS");
+		add.setBounds(300,500,150,30);
+		add.addActionListener(this);
+		add(add);
+		
+		JButton back=new JButton("GO BACK");
+		back.setBounds(450,500,150,30);
+		back.addActionListener(this);
+		add(back);
+		
+		setSize(900,700);
+		setLocation(300,50);
+		setVisible(true);
+	}
+	
+	public void actionPerformed(ActionEvent ae)
+	{
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		new AddEmployee();
+
+	}
+
+}
